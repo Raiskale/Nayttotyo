@@ -80,8 +80,9 @@ h1 span {
     background: var(--c2);
     position: absolute;
     bottom: 0;
+    height: 10vh;
     width: 100%;
-     
+    box-shadow: 0 4px 20px var(--c3-darker);
 }
 
 

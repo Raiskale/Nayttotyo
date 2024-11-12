@@ -225,25 +225,43 @@ h1 span {
 /* Väriosio */
 
 .testaus {
+  
   min-height: 90vh;
-  align-items: center;
+  margin-top: 7.5vh;
   justify-content: center;
   text-align: center;
+  display: flex;
 }
 
 .otsikko2 {
+  outline: 1px solid red;
+  display:block;
   color: var(--c3);
-  margin-top: 5rem;
-  font-size: 3rem;
+  border-radius: 10px;
+  padding: 10rem;
+  max-height: 75vh;
+  font-size: 2rem;
 }
 
-.otsikko2 span {
+.otsikko2 image {
+  outline: 1px solid red;
+  padding: 5rem;
+  z-index: 2;
+}
+
+.otsikko2 h2 {
+  position: absolute;
+  
+}
+
+.otsikko2 h2 span {
   text-decoration: underline;
 }
 
 .otsikko2 h3 {
   font-size: 2rem;
-  margin-top: 5vh;
+  margin-top: 10vh;
+  z-index: 2;
 }
 
 

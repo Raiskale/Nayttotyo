@@ -106,15 +106,24 @@ h1 span {
     padding: 20px 30px;
   }
   
+  .logo {
+    display: flex;
+    align-items: center; 
+  }
+  
   .logo a {
-    font-size: 20px;
+    font-size: 16px;
+    margin-left: 10px; 
     font-weight: bold;
     color: var(--c3);
   }
   
-  .logo a span {
-    color: var(--c3);
+  .logo .logo {
+    width: 46px;
   }
+  
+  
+  
   
   .menu {
     display: flex;

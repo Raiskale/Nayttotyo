@@ -1,4 +1,5 @@
 * {
+
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -19,6 +20,7 @@
 }
 
 body {
+  
     color: var(--c2);
 }
 
@@ -95,7 +97,7 @@ h1 span {
     top: 0;
     width: 100%;
     box-shadow: 0 4px 20px var(--c3-darker);
-    background-color: var(--c2);
+    background: var(--c2);
     z-index: 1;
   }
   
@@ -122,9 +124,98 @@ h1 span {
     width: 46px;
   }
   
+
+  .palvelut {
+    background: var(--c2);
+    align-items: center;
+    justify-content: center;
+  }
+
+  .otsikko h2 {
+    color: var(--c3);
+    text-align: center;
+    font-size: 3.5rem;
+    margin-top: 5vw;
+    margin: 2rem;
+  }
   
-  
-  
+  .palvelut .palvelut-container{
+    margin-top: 2vh;
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+
+    gap: 2.5rem;
+}
+
+.palvelut-container .palvelut-box{
+    position: relative;
+    display: flex;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem rgba(0,0,0,.1);
+    overflow: hidden;
+}
+
+.palvelut-box img{
+    width: 100%;
+    transition: 1.25s;
+    filter: brightness(70%);
+}
+
+.palvelut-box:hover img{
+    transform: scale(1.1);
+}
+
+.palvelut-box .palvelut-layer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,0,.1), var(--main-color));
+  color: var(--white-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 4rem;
+  opacity: 1;
+  transition: .5s ease;
+}
+
+
+
+.palvelut-layer h4{
+  font-size: 5rem;
+}
+
+.palvelut-layer p{
+  font-size: 1.6rem;
+  margin: .3rem 0 1rem;
+}
+
+.palvelut-layer a{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  background: var(--white-color);
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.palvelut-layer a i{
+  font-size: 3rem;
+  color: #fffffffc;
+}
+
+.palvelut-container .heading{
+  padding-bottom: 1rem;
+}
+
   .menu {
     display: flex;
     justify-content: center;
@@ -193,12 +284,7 @@ h1 span {
       transition: transform 0.3s ease-in-out;
       box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     }
-    .customer-logos {
-        justify-content: center; /* Centers logos on smaller screens */
-    }
-    .customer-logos img {
-        max-width: 80%; /* Makes logos slightly smaller */
-    }
+
     .menu 
     a {
       margin-left: 12px;
@@ -215,4 +301,16 @@ h1 span {
       font-size: 28px;
       cursor: pointer;
     }
+}
+
+@media (max-width: 768px){
+  .palvelut .palvelut-container {
+    grid-template-columns: repeat(2, 1fr);
+}
+}
+
+@media (max-width: 617px){
+  .palvelut .palvelut-container{
+      grid-template-columns: 1fr;
+  }
 }

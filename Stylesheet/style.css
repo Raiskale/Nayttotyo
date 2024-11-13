@@ -233,38 +233,61 @@ h1 span {
   display: flex;
 }
 
-.otsikko2 {
-  outline: 1px solid red;
-  display:block;
+.testaa {
   color: var(--c3);
-  border-radius: 10px;
-  padding: 10rem;
-  max-height: 75vh;
-  font-size: 2rem;
+  width: 100%;
+  max-width: 55rem;
+ 
 }
 
-.otsikko2 image {
-  outline: 1px solid red;
-  padding: 5rem;
-  z-index: 2;
+.testaa h2 {
+  color: var(--c3);
+  font-size: 4rem;
 }
 
-.otsikko2 h2 {
-  position: absolute;
-  
-}
-
-.otsikko2 h2 span {
+.testaa h2 span {
   text-decoration: underline;
 }
 
-.otsikko2 h3 {
+.testaa p {
   font-size: 2rem;
-  margin-top: 10vh;
-  z-index: 2;
+  margin-top: 5rem;
 }
 
+.testaa .pic {
+  background-image: url("/Images/Painting canvas with different color palettes.png");
+  background-size: cover; 
+  background-position: center; 
+  align-self: center;
+  background-repeat: no-repeat; 
+  width: 70%; 
+  margin-left: 8.5vh;
+  border-radius: 15px;
+  border: 2px solid var(--c3);
+  box-shadow: 1px 2px 10px var(--c3);
+  height: 55%;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
 
+.testaa .testaabtn {
+  
+  font-size: 2rem;
+  border: 2px solid var(--c3);
+  color: var(--c3);
+  font-weight: 600;
+  background: var(--c2);
+  border-radius: 10px;
+  padding: .75rem 1rem;
+  transition: .5s ease;
+  text-align: center;
+}
+
+.testaa .testaabtn:hover {
+  background: var(--c3);
+  color: var(--c2);
+  
+}
 
 
   .menu {

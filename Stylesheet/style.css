@@ -337,13 +337,45 @@ h1 span {
   color: white; 
   z-index: 2; 
   font-size: 8rem;
+  color: transparent; 
+  background: linear-gradient(200deg, #ffffff, rgb(0, 103, 58), rgb(255, 255, 255));
+  background-size: 200%; 
+  background-clip: text; 
+  -webkit-background-clip: text; 
+  animation: shine 13s infinite;
 }
 
 
 .galleria h3 {
-  color: var(--c2);
+  color: transparent; 
+  background: linear-gradient(200deg, #ffffff, rgb(3, 180, 103), rgb(255, 255, 255));
+  background-size: 100%; 
+  background-clip: text; 
+  -webkit-background-clip: text; 
+  animation: shine 13s infinite;
   z-index: 2;
   font-size: 1.5rem;
+}
+
+.galleria .gallerianappi {
+  border: 2px solid var(--c3);
+  font-size: 2rem;
+  background: linear-gradient(260deg, #165c04, rgb(0, 107, 20), rgba(255, 255, 255, 0.425));
+  background-size: 200%; 
+  border-radius: 10px;
+  padding: .5rem 3rem;
+  color: var(--c2);
+  text-align: center;
+  justify-content: center;
+  margin-top: 2vh;
+  transition: 1s ease;
+  z-index: 2;
+}
+
+.galleria .gallerianappi:hover {
+  transition-duration: .5s;
+  background: linear-gradient(260deg, #165c04, rgb(0, 107, 20), rgba(255, 255, 255, 0.667));
+  
 }
 
 

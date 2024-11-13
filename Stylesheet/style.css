@@ -23,6 +23,7 @@
 body {
     
     color: var(--c2);
+    
 }
 
 
@@ -225,69 +226,80 @@ h1 span {
 /* Väriosio */
 
 .testaus {
-  
+  max-height: 80vh;
   min-height: 90vh;
-  margin-top: 7.5vh;
+
+  
+
   justify-content: center;
-  text-align: center;
   display: flex;
 }
 
-.testaa {
-  color: var(--c3);
-  width: 100%;
-  max-width: 55rem;
- 
+.testaus .container {
+  margin-top: 10vh;
+  align-items: center;
+  text-align: center;
+  
+  display: flex;
+  height: 55vh;
+  justify-content: start;
+  flex-direction: column; /* Stack children vertically */
+  
 }
 
-.testaa h2 {
-  color: var(--c3);
-  font-size: 4rem;
+.container h2 {
+  color: transparent; 
+  background: linear-gradient(200deg, #0c2f03, rgb(0, 107, 20), rgb(1, 79, 10));
+  background-size: 200%; 
+  background-clip: text; 
+  -webkit-background-clip: text; 
+  animation: shine 7s infinite;
+  font-size: 7rem;
 }
 
-.testaa h2 span {
+@keyframes shine {
+  0% {
+    background-position: 200%; /* Start off-screen to the left */
+  }
+  100% {
+    background-position: -200%; /* End off-screen to the right */
+  }
+}
+
+.container h3 {
+  color: var(--c3);
+  margin-top: 3rem;
+  font-size: 3rem;
+  max-width: 80%;
+}
+
+.container h3 span {
   text-decoration: underline;
 }
 
-.testaa p {
-  font-size: 2rem;
-  margin-top: 5rem;
-}
-
-.testaa .pic {
-  background-image: url("/Images/Painting canvas with different color palettes.png");
-  background-size: cover; 
-  background-position: center; 
-  align-self: center;
-  background-repeat: no-repeat; 
-  width: 70%; 
-  margin-left: 8.5vh;
-  border-radius: 15px;
-  border: 2px solid var(--c3);
-  box-shadow: 1px 2px 10px var(--c3);
-  height: 55%;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-}
-
-.testaa .testaabtn {
-  
-  font-size: 2rem;
-  border: 2px solid var(--c3);
+.container p {
   color: var(--c3);
-  font-weight: 600;
-  background: var(--c2);
-  border-radius: 10px;
-  padding: .75rem 1rem;
-  transition: .5s ease;
-  text-align: center;
+  font-size: 2rem;
 }
 
-.testaa .testaabtn:hover {
-  background: var(--c3);
-  color: var(--c2);
-  
+
+.container .testausnappi {
+  border: 3px solid var(--c3);
+  font-size: 2.25rem;
+  border-radius: 10px;
+  padding: .5rem 2rem;
+  color: var(--c3);
+  text-align: center;
+  justify-content: center;
+  margin-top: 20vh;
+  transition: .5s;
 }
+
+.container .testausnappi:hover {
+  color: var(--c2);
+  background: var(--c3);
+}
+
 
 
   .menu {
@@ -392,5 +404,9 @@ h1 span {
   }
   .palvelut-layer h4 {
     font-size: 3rem;
+  }
+
+  .container .testausnappi {
+    margin-top: 17.5vh;
   }
 }

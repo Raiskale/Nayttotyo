@@ -368,12 +368,11 @@ h1 span {
   text-align: center;
   justify-content: center;
   margin-top: 2vh;
-  transition: 1s ease;
   z-index: 2;
 }
 
 .galleria .gallerianappi:hover {
-  transition-duration: .5s;
+  transition: 2s;
   background: linear-gradient(260deg, #165c04, rgb(0, 107, 20), rgba(255, 255, 255, 0.667));
   
 }

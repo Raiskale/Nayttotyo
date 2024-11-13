@@ -228,7 +228,8 @@ h1 span {
 .testaus {
   max-height: 80vh;
   min-height: 90vh;
-
+  background-color: var(--c2);
+  background-image: url("data:image/svg+xml,%3Csvg width='84' height='16' viewBox='0 0 84 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M78 7V4h-2v3h-3v2h3v3h2V9h3V7h-3zM30 7V4h-2v3h-3v2h3v3h2V9h3V7h-3zM10 0h2v16h-2V0zm6 0h4v16h-4V0zM2 0h4v16H2V0zm50 0h2v16h-2V0zM38 0h2v16h-2V0zm28 0h2v16h-2V0zm-8 0h6v16h-6V0zM42 0h6v16h-6V0z' fill='%23006b14' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
   
 
   justify-content: center;
@@ -286,20 +287,64 @@ h1 span {
 .container .testausnappi {
   border: 3px solid var(--c3);
   font-size: 2.25rem;
+  background: linear-gradient(320deg, #165c04, rgb(0, 107, 20), rgb(1, 79, 10));
+  background-size: 200%; 
+  animation: shine 10s infinite;
   border-radius: 10px;
   padding: .5rem 2rem;
-  color: var(--c3);
+  color: var(--c2);
   text-align: center;
   justify-content: center;
   margin-top: 20vh;
-  transition: .5s;
+  transition: 1s;
 }
 
 .container .testausnappi:hover {
-  color: var(--c2);
-  background: var(--c3);
+  color: var(--c3);
+  background: var(--c2);
+  
 }
 
+
+/* galleria */
+
+.galleria {
+  position: relative;
+  background-image: url(/Images/Galleri-yhdistetty.png);
+  background-position: center;
+  background-size: cover;
+  scale: 1;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;  
+
+}
+
+.galleria::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% transparency */
+  z-index: 1;
+  
+}
+
+
+.galleria h2 {
+  position: relative;
+  color: white; 
+  z-index: 2; 
+  font-size: 8rem;
+}
+
+
+.galleria h3 {
+  color: var(--c2);
+  z-index: 2;
+  font-size: 1.5rem;
+}
 
 
   .menu {

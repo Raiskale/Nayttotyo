@@ -47,18 +47,42 @@ html {
     min-height: 100vh;
     background-color: var(--c2);
     background-image: url("data:image/svg+xml,%3Csvg width='84' height='16' viewBox='0 0 84 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M78 7V4h-2v3h-3v2h3v3h2V9h3V7h-3zM30 7V4h-2v3h-3v2h3v3h2V9h3V7h-3zM10 0h2v16h-2V0zm6 0h4v16h-4V0zM2 0h4v16H2V0zm50 0h2v16h-2V0zM38 0h2v16h-2V0zm28 0h2v16h-2V0zm-8 0h6v16h-6V0zM42 0h6v16h-6V0z' fill='%23006b14' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
-    
-  
     justify-content: center;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 
+.kone {
+    border: 1px solid red;
+    padding: 37.5rem 35rem;
+    margin-top: 5vh;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+}
 
 
+.kone .otsikko {
+    
+    background: var(--c3);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 3.5rem;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+}
 
-
-
+.otsikko h2 {
+    font-size: 2rem;
+}
 
 
 /* navbar rääsät */
@@ -98,129 +122,15 @@ html {
 
 
 
-/* Väriosio */
 
 
 
 
-@keyframes shine {
-  0% {
-    background-position: 200%; /* Start off-screen to the left */
-  }
-  100% {
-    background-position: -200%; /* End off-screen to the right */
-  }
-}
-
-.container h3 {
-  color: var(--c3);
-  margin-top: 3rem;
-  font-size: 3rem;
-  max-width: 80%;
-}
-
-.container h3 span {
-  text-decoration: underline;
-}
-
-.container p {
-  color: var(--c3);
-  font-size: 2rem;
-}
 
 
-.container .testausnappi {
-  border: 3px solid var(--c3);
-  font-size: 2.25rem;
-  background: linear-gradient(320deg, #165c04, rgb(0, 107, 20), rgb(1, 79, 10));
-  background-size: 200%; 
-  animation: shine 10s infinite;
-  border-radius: 10px;
-  padding: .5rem 2rem;
-  color: var(--c2);
-  text-align: center;
-  justify-content: center;
-  margin-top: 20vh;
-  transition: 1s;
-}
-
-.container .testausnappi:hover {
-  color: var(--c3);
-  background: var(--c2);
-  
-}
 
 
-/* galleria */
 
-.galleria {
-  position: relative;
-  background-image: url(/Images/Galleri-yhdistetty.png);
-  background-position: center;
-  background-size: cover;
-  scale: 1;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: column; 
-  align-items: center;  
-
-}
-
-.galleria::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% transparency */
-  z-index: 1;
-  
-}
-
-
-.galleria h2 {
-  position: relative;
-  color: white; 
-  z-index: 2; 
-  font-size: 8rem;
-  color: transparent; 
-  background: linear-gradient(200deg, #ffffff, rgb(0, 103, 58), rgb(255, 255, 255));
-  background-size: 200%; 
-  background-clip: text; 
-  -webkit-background-clip: text; 
-  animation: shine 13s infinite;
-}
-
-
-.galleria h3 {
-  color: transparent; 
-  background: linear-gradient(200deg, #ffffff, rgb(3, 180, 103), rgb(255, 255, 255));
-  background-size: 100%; 
-  background-clip: text; 
-  -webkit-background-clip: text; 
-  animation: shine 13s infinite;
-  z-index: 2;
-  font-size: 1.5rem;
-}
-
-.galleria .gallerianappi {
-  border: 2px solid var(--c3);
-  font-size: 2rem;
-  background: linear-gradient(260deg, #165c04, rgb(0, 107, 20), rgba(255, 255, 255, 0.425));
-  background-size: 200%; 
-  border-radius: 10px;
-  padding: .5rem 3rem;
-  color: var(--c2);
-  text-align: center;
-  justify-content: center;
-  margin-top: 2vh;
-  z-index: 2;
-}
-
-.galleria .gallerianappi:hover {
-  transition: 2s;
-  background: linear-gradient(260deg, #165c04, rgb(0, 107, 20), rgba(255, 255, 255, 0.667));
-  
-}
 
 
   .menu {
@@ -313,21 +223,12 @@ html {
 }
 
 @media (max-width: 768px){
-  .palvelut .palvelut-container {
-    grid-template-columns: repeat(2, 1fr);
-}
+    .kone {
+        margin-top: 5vh;
+        padding: 32.5rem 20rem;
+    }
 }
 
 @media (max-width: 617px){
-  .palvelut .palvelut-container{
-      grid-template-columns: 1fr;
-      
-  }
-  .palvelut-layer h4 {
-    font-size: 3rem;
-  }
 
-  .container .testausnappi {
-    margin-top: 17.5vh;
-  }
 }

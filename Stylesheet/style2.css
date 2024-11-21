@@ -83,9 +83,9 @@ html {
 
 
 .värit {
-  height: 40rem;
+  height: 50rem;
   text-align: center;
-  background: rgba(97, 1, 153, 0.089);
+  background: rgba(1, 153, 52, 0.089);
   background-image: url(Public/Images/pattern.svg);
   backdrop-filter: blur( 9px );
   -webkit-backdrop-filter: blur( 9px );
@@ -102,11 +102,15 @@ html {
   display: flex;
   text-align: center;
   background: var(--c2);
-  background-image: url("data:image/svg+xml,%3Csvg width='84' height='16' viewBox='0 0 84 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M78 7V4h-2v3h-3v2h3v3h2V9h3V7h-3zM30 7V4h-2v3h-3v2h3v3h2V9h3V7h-3zM10 0h2v16h-2V0zm6 0h4v16h-4V0zM2 0h4v16H2V0zm50 0h2v16h-2V0zM38 0h2v16h-2V0zm28 0h2v16h-2V0zm-8 0h6v16h-6V0zM42 0h6v16h-6V0z' fill='%23006b14' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur( 9px );
 }
 
+.värit p {
+  color: var(--c3);
+  font-size: 2rem;
+  margin-top: 2rem;
+}
 
 
 
@@ -219,11 +223,11 @@ html {
   
 
 
-
   @media (max-width: 1280px) {
     .kone-box {
       max-width: 40rem;
     }
+
   }
 
   @media only screen and (max-width: 950px) {

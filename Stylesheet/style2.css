@@ -54,11 +54,9 @@ html {
     
 }
 
-.kone-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
+
+
 
 .kone-container {
   display: grid;
@@ -76,16 +74,27 @@ html {
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
   overflow: hidden;
   width: 100%; 
-  max-width: 55rem; 
-  border: 2px solid var(--c3);
-  box-shadow: 2px 2px 10px rgb(0, 111, 2);
+  max-width: 70rem; 
+  border: 2px solid rgba(0, 238, 59, 0.502);
+  box-shadow: 2px 2px 20px rgb(2, 110, 51);
+  
   border-radius: 20px;
 }
 
+
+.värit {
+  height: 40rem;
+  text-align: center;
+  background: rgba(97, 1, 153, 0.089);
+  background-image: url(Public/Images/pattern.svg);
+  backdrop-filter: blur( 9px );
+  -webkit-backdrop-filter: blur( 9px );
+}
 .kone-box img {
   width: 100%; 
+  transition: 0.5s ease;
   object-fit: cover; 
-  
+  box-shadow: 2px 2px 20px rgba(0, 255, 64, 0.685);
 }
 
 .varit {
@@ -210,6 +219,13 @@ html {
   
 
 
+
+  @media (max-width: 1280px) {
+    .kone-box {
+      max-width: 40rem;
+    }
+  }
+
   @media only screen and (max-width: 950px) {
     .menu {
       flex-direction: column;
@@ -246,17 +262,13 @@ html {
 
 @media (max-width: 768px){
   .kone-container {
-    grid-template-columns: repeat(2, 1fr);
-    margin: 2rem;
-  }
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 5vh;
+}
+
+  
 
 
 }
 
-@media (max-width: 617px){
-  .kone-box {
-    max-height: 70vh;
-    width: 95vw;
-
-  }
-}

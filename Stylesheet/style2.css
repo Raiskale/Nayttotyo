@@ -7,6 +7,7 @@
     font-family: sans-serif;
     text-decoration: none;
     list-style: none;
+    
 }
 
 
@@ -47,64 +48,86 @@ html {
     min-height: 100vh;
     background-color: var(--c2);
     background-image: url("data:image/svg+xml,%3Csvg width='84' height='16' viewBox='0 0 84 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M78 7V4h-2v3h-3v2h3v3h2V9h3V7h-3zM30 7V4h-2v3h-3v2h3v3h2V9h3V7h-3zM10 0h2v16h-2V0zm6 0h4v16h-4V0zM2 0h4v16H2V0zm50 0h2v16h-2V0zM38 0h2v16h-2V0zm28 0h2v16h-2V0zm-8 0h6v16h-6V0zM42 0h6v16h-6V0z' fill='%23006b14' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
-    justify-content: center;
     display: flex;
-
-    align-items: center;
-    
+    position: relative;
 }
 
-.kone-box {
+.kone {
+  flex-direction: row;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.kone-container {
-  display: grid;
-  place-items: center;
-  margin-top: 5vh;
-  
-
+  border: 5px solid var(--c3);
+  margin: 5%;
+  border-radius: 50px;
   
 }
+.boxi {
+  display: flex;  
+  
+  padding: 1rem;
+  flex-direction: column;
+}
 
-.kone-box {
+.boxi img {
+  width: 75%;
+  height: 65%;
+  background: #DD4132;
+  margin-left: 2vw;
+  
+}
+
+.boxi2 {
+  flex-direction: column;
+  display: flex;  
+  
+}
+
+.boxi2 img {
+  width: 75%;
+  height: 65%;
+  background: #DD4132;
+  border-radius: 10px;
+  transition: .5s;
+}
+.boxi2 .napit {
   display: flex;
-  flex-direction: column; 
-  border-radius: 2rem;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  width: 100%; 
-  max-width: 55rem; 
-  border: 2px solid var(--c3);
-  box-shadow: 2px 2px 10px rgb(0, 111, 2);
-  border-radius: 20px;
-}
-
-.kone-box img {
-  width: 100%; 
-  object-fit: cover; 
+  max-width: 65%;
+  flex-wrap: wrap;
+  margin-top: 2vh;
+  gap: 1rem;
   
 }
 
-.varit {
-  height: 45rem;
+.boxi2 .napit button {
+  padding: .4rem 1rem;
+  border-radius: 7px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.boxi .napit {
   display: flex;
-  text-align: center;
-  background: var(--c2);
-  background-image: url("data:image/svg+xml,%3Csvg width='84' height='16' viewBox='0 0 84 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M78 7V4h-2v3h-3v2h3v3h2V9h3V7h-3zM30 7V4h-2v3h-3v2h3v3h2V9h3V7h-3zM10 0h2v16h-2V0zm6 0h4v16h-4V0zM2 0h4v16H2V0zm50 0h2v16h-2V0zM38 0h2v16h-2V0zm28 0h2v16h-2V0zm-8 0h6v16h-6V0zM42 0h6v16h-6V0z' fill='%23006b14' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur( 9px );
+  max-width: 65%;
+  flex-wrap: wrap;
+  margin-top: 2vh;
+  gap: 1rem;
+  margin-left: 2vw;
 }
 
-
-
-
-
-.otsikko h2 {
-    font-size: 2rem;
+.napit button {
+  padding: .4rem 1rem;
+  border-radius: 7px;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
+
+.napit button:hover,
+.boxi2 .napit button:hover {
+  background: var(--c3);
+}
+
 
 
 /* navbar rääsät */

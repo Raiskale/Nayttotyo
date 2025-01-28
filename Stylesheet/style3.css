@@ -12,13 +12,13 @@
 
 
 :root {
-    --c1: #001553;
-    --c1-darker: #000821;
-    --c2: #faf9fb;
+  --c1: #001553;
+  --c1-darker: #000821;
+  --c2: #faf9fb;
 
-    --c3: #006b14;
-    --c3-darker: #006b1449;
-    --c4: #00ee2c;
+  --c3: #01941c;
+  --c3-darker: #006b1449;
+  --c4: #00ee2c;
 }
 
 body {
@@ -28,12 +28,6 @@ body {
 }
 
 
-section {
-    min-height: 90vh;
-    max-width: 100vw;
-    overflow: hidden;
-}
-
 
 html {
     font-size: 62.5%;
@@ -41,93 +35,119 @@ html {
 
 
 
-/*  pääasiassa home-taustakuva */
 
-.home {
-    max-height: 100vh;
-    min-height: 100vh;
-    background-color: var(--c2);
-    display: flex;
-    position: relative;
-}
 
-.kone {
-  flex-direction: row;
-  width: 100%;
+
+.juu {
   display: flex;
+  position: relative;
+  height: 290vh;
   justify-content: center;
-  align-items: center;
-  border: 5px solid var(--c3);
-  margin: 5%;
-  border-radius: 50px;
-  
-}
-.boxi {
-  display: flex;  
-  
-  padding: 1rem;
-  flex-direction: column;
+  background-color: #ffffff;
+background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2301941c' fill-opacity='0.1'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
-.boxi img {
-  width: 75%;
-  height: 65%;
-  background: #DD4132;
-  margin-left: 2vw;
+
+.keski {
+  width: 50vw;
+  margin-top: 20vh;
+  border-radius: 25px;
+  height: 275vh;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background: var(--c2);
+  box-shadow: 0px 2px 10px var(--c3);
   
 }
-
-.boxi2 {
-  flex-direction: column;
-  display: flex;  
-  
-}
-
-.boxi2 img {
-  width: 75%;
-  height: 65%;
-  background: #DD4132;
-  border-radius: 10px;
-  transition: .5s;
-}
-.boxi2 .napit {
+.teksti {
   display: flex;
-  max-width: 65%;
-  flex-wrap: wrap;
-  margin-top: 2vh;
-  gap: 1rem;
+  flex-direction: column;
+  max-width: 100%;
+  padding-left: 7.5vw;
+}
+
+.teksti p {
+  color: var(--c3);
+  font-size: 1.75rem;
+  display: flex;
+  align-self: first baseline;
+  
+  border: 1px solid var(--c3);
+  padding: .40rem .60rem;
+  border-radius: 7px;
+  transform: rotate(-3deg);
+  margin-top: 7.5vh;
+  background: var(--c2);
+  
+}
+.teksti h2 {
+  
+  color: var(--c1-darker);
+  margin-top: 1vh;
+  font-size: 4.5rem;
+}
+
+.teksti h2 span {
+  color: var(--c3);
+}
+
+.tapetointi {
+  margin-left: 7.5vw;
+  display: flex;
+  margin-top: 6.5vh;
+  border: 1.5px solid var(--c3);
+  box-shadow: 0px 2px 10px var(--c3);
+  width: 60%;
+  border-radius: 15px;
+  height: 27.5%;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+  /* From https://css.glass */
+background: rgba(227, 227, 227, 0.34);
+border-radius: 16px;
+
+backdrop-filter: blur(3.9px);
+-webkit-backdrop-filter: blur(3.9px);
+border: 1px solid rgba(255, 255, 255, 1);
   
 }
 
-.boxi2 .napit button {
-  padding: .4rem 1rem;
-  border-radius: 7px;
-  font-size: 1.5rem;
-  cursor: pointer;
+.tapetointi img {
+  height: 52.5%;
+  width: 100%;
+ 
+  
 }
 
-.boxi .napit {
-  display: flex;
-  max-width: 65%;
-  flex-wrap: wrap;
-  margin-top: 2vh;
-  gap: 1rem;
+
+
+.tapetointi .tekstit {
+  margin-top: 1vh;
+  max-width: 80%;
   margin-left: 2vw;
+  z-index: 10;
+  
+  
 }
 
-.napit button {
-  padding: .4rem 1rem;
-  border-radius: 7px;
-  font-size: 1.5rem;
-  cursor: pointer;
+.tekstit h2 {
+  color: var(--c1-darker);
+  font-size: 2.5rem;
 }
 
-.napit button:hover,
-.boxi2 .napit button:hover {
-  background: var(--c3);
+.tekstit h2 span {
+  color: var(--c3);
 }
 
-
+.tekstit p {
+  color: var(--c1-darker);
+  font-size: 1.75rem;
+}
+.tekstit p span {
+  color: var(--c3);
+}
 
 /* navbar rääsät */
 
@@ -163,8 +183,6 @@ html {
     width: 46px;
   }
   
-
-
 
 
 
@@ -230,6 +248,7 @@ html {
     transform: scale(1, 1);
   }
   
+
 
 
   @media only screen and (max-width: 950px) {

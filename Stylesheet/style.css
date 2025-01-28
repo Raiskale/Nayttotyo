@@ -7,6 +7,7 @@
     font-family: sans-serif;
     text-decoration: none;
     list-style: none;
+    
 }
 
 
@@ -15,7 +16,7 @@
     --c1-darker: #000821;
     --c2: #faf9fb;
 
-    --c3: #006b14;
+    --c3: #01941c;
     --c3-darker: #006b1449;
     --c4: #00ee2c;
 }
@@ -61,12 +62,54 @@ html {
     
     width: 100%;
     max-width: 45rem;
-    font-size: 2rem;
-    margin-left: 2vw;
+    
+    margin-left: 15vw;
+    font-weight: 500;
     position: relative;
-    transform: translateY(17.5vh);
+    transform: translateY(32.5vh);
     height: 45vh;
     z-index: 1;
+}
+
+.teksti .napit {
+  display: flex;
+  gap: .5vw;
+  margin-top: 1vh;
+}
+
+.napit a:nth-child(1) {
+  color: var(--c2);
+  display: flex;
+  align-items: center;
+  padding: .65rem 2rem;
+  background: var(--c3);
+  border-radius: 7px;
+  font-size: 1.75rem;
+  transition: .2s ease-in-out;
+}
+
+.napit a:nth-child(1):hover {
+  background: transparent;
+  border: 0.5px solid var(--c3);
+
+}
+
+.napit a:nth-child(2) {
+  color: var(--c2);
+  border: 2px solid var(--c3);
+  background: var(--c3-darker);
+  padding: .65rem 2rem;
+  transition: .2s ease-in-out;
+  border-radius: 5px;
+  font-size: 1.75rem;
+  text-shadow: 0px 0px 1px var(--c2);
+  
+}
+
+.napit a:nth-child(2):hover {
+  color: var(--c2);
+  background: var(--c3);
+  border: none;
 }
 
 h1 {
@@ -382,37 +425,79 @@ h1 span {
   display: flex;
   align-items: center;
   flex-direction: column;
-  max-height: 100vh;
+  position: relative;
   overflow: hidden;
+  max-width: 100vw;
   background-image: url("data:image/svg+xml,%3Csvg width='84' height='16' viewBox='0 0 84 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M78 7V4h-2v3h-3v2h3v3h2V9h3V7h-3zM30 7V4h-2v3h-3v2h3v3h2V9h3V7h-3zM10 0h2v16h-2V0zm6 0h4v16h-4V0zM2 0h4v16H2V0zm50 0h2v16h-2V0zM38 0h2v16h-2V0zm28 0h2v16h-2V0zm-8 0h6v16h-6V0zM42 0h6v16h-6V0z' fill='%23006b14' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
 }
 
-.yhteys .line {
-  position: absolute;
-  padding: 1.5px;
-  opacity: .3;
-  border-radius: 999px;
-  box-shadow: 1px 1px var(--c3-darker);
-  background: var(--c3);
-  height: 70vh;
-  margin-top: 10vh;
+.footer {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+  height: 12.5vh;
+  background-color: var(--c3); 
+  width: 100%; 
+  position: absolute; 
+  bottom: 0; 
+  z-index: 100; 
+  padding: 2vh 15vw; 
+  flex-direction: row;
 
+  
 }
+
+
+.footer h3 {
+  max-width: 20vw;
+  font-weight: 200;
+}
+
+.somet {
+  margin-right: 20vw;
+  display: flex;
+}
+
+.somet a i {
+ font-size: 2.65rem;
+ color: var(--c2);
+ 
+ padding: .7rem;
+ transition: 0.2s ease-in-out;
+}
+
+.somet a i:hover {
+  transform: scale(1.2);
+}
+
+
 
 .yhteys .otsikko h2 {
   color: var(--c3);
   margin-top: 5vh;
   font-size: 3.5rem;
   margin-bottom: 2vh;
-  
+  display: flex;
+  align-self: flex-start;
   
 }
 
+.yhteys .asiat {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 2rem; 
+  width: 100%;
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
 .yhteys .vasen {
-  padding-left: 15vw;
-  display: flex;
-  align-self: first baseline;
+  display: grid;
   flex-direction: column;
+  max-width: 50%;
+  height: 100%;
 }
 
 .vasen iframe {
@@ -421,6 +506,21 @@ h1 span {
   border-radius: 20px;
   border: 2px solid var(--c3);
   margin-bottom: 2vh;
+}
+
+.vasen h3 {
+  font-size: 2rem;
+  color: var(--c3);
+  margin-top: 2vh;
+}
+
+.vasen a {
+  color: var(--c3);
+  font-size: 1.5rem;
+}
+
+.vasen a i {
+  margin-right: .5vw;
 }
 
 .vasen h2 {
@@ -436,8 +536,120 @@ h1 span {
   
 }
 
+.oikea {
+  flex-direction: column; 
+  height: 100%;
+  display: grid;
+  
+}
 
+.oikea p {
+  color: var(--c3);
+  font-size: 1.5rem;
+  font-weight: bold;
+  transform: rotate(-6deg);
+  max-width: 5rem;
+  border-radius: 8px;
+  padding-left: .2vw;
+  padding-top: 0.5vh;
+  padding-bottom: 0.5vh;
+  position: absolute;
+  margin-top: 5vh;
+  
+  background: var(--c2);
+  max-height: 4vh;
+  min-width: 11rem;
+  display: flex;
+  border: 1px solid var(--c3);
+}
 
+.oikea h2 {
+  font-size: 3rem;
+  color: var(--c3);
+  display: flex;
+  align-self: center;
+  margin-left: 8vw;
+  
+}
+form{
+  max-width: 80%;
+  margin: 1rem;
+  text-align: center;
+  margin-bottom: 10vh;
+}
+
+form .input-box{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 5vh;
+  margin-bottom: 1vh;
+  
+
+}
+
+form .input-box input {
+  width: 49%; 
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  color: var(--c3);
+  border: 0.1rem solid var(--c3);
+  border-radius: 0.8rem;
+  margin: 0.7rem 0;
+  box-sizing: border-box; 
+}
+
+form textarea {
+  resize: none;
+  width: 100%;
+  height: 20rem;
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  color: var(--c3);
+  background-size: 100%;
+  border-radius: 0.8rem; 
+  margin: 0.7rem 0;
+  border: 0.2rem solid var(--c3); 
+  box-sizing: border-box; 
+  background-image: url(/Images/Poistettutausta-logo_AME/Logo\ no\ bg.png);
+  background-size: 45%;
+  background-position: right;
+  background-repeat: no-repeat;
+  
+}
+
+form .input-box input{
+  width: 49%;
+}
+
+form textarea{
+  resize: none;
+  width: 100%;
+  height: 20rem;
+}
+
+form .btn2{
+  margin-top: 1rem;
+  cursor: pointer;
+  border: 1px solid var(--c3);
+  background: var(--c3);
+  color: var(--c2);
+  padding: 1rem 1rem;
+  border-radius: 0.8rem;
+  transition: 0.5s ease-in-out;
+  width: 100%;
+  max-width: 100%;
+}
+.btn2:hover {
+  background: #0c2f03;
+}
+
+form .input-box input::placeholder,
+form textarea::placeholder {
+    color: var(--c3); 
+    opacity: 1; 
+    font-weight: bold;
+}
   .menu {
     display: flex;
     justify-content: center;
@@ -509,6 +721,24 @@ h1 span {
       box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     }
 
+    .yhteys .asiat {
+       grid-template-columns: 1fr;
+       gap: 5vh; 
+    }
+
+    .footer {
+      height: 10vh;
+    }
+
+    .teksti {
+      margin-left: 2vw;
+      
+    }
+
+    html {
+      font-size: 55%;
+    }
+
     .menu 
     a {
       margin-left: 12px;
@@ -532,6 +762,42 @@ h1 span {
     grid-template-columns: repeat(2, 1fr);
 }
 
+
+
+.footer h3 {
+  max-width: 100vw;
+  font-weight: 200;
+}
+
+.yhteys {
+  height: auto;
+}
+
+.oikea h2 {
+  margin-left: 0;
+}
+
+.yhteys .otsikko h2 {
+  align-self: ;
+}
+
+
+
+.footer {
+  padding: 2vh 2vw; 
+}
+
+.somet {
+  flex-direction: row;
+  margin-left: 5;
+}
+.somet a i {
+  font-size: 2rem;
+  
+  
+}
+
+
 }
 
 @media (max-width: 617px){
@@ -544,7 +810,7 @@ h1 span {
   }
   .yhteys iframe {
     width: 75vw;
-    height: 60vh;
+    height: 40vh;
   }
 
   .container .testausnappi {

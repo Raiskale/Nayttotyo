@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kotkantien maalaus- ja tapetointi</title>
+    <link rel="stylesheet" href="Stylesheet/style4.css">
+    <link rel="shortcut icon" href="/Images/Logo500px.png" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <div class="logo">
+                <img src="/Images/Logo500px.png" alt="Kotkantien logo" class="logo">
+                <a href="index.html">Kotkantien maalaus- ja <br>tapetointi</a>
+            </div>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <ul class="menu">
+                <li><a href="index.html#home">Etusivu</a></li>
+                <li><a href="index.html#palvelut">Palvelut</a></li>
+                <li><a href="index.html#testaus">Värikone</a></li>
+                <li><a href="index.html#galleria">Galleria</a></li>
+                <li><a id="btn" href="#">Yhteystiedot</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="otsikko">
+            <h2>Kotkantie maalaus- ja tapetointi</h2>
+            <h1>Kuvagalleria</h1>
+        </div>
+        <div id="gallery">
+            
+            <figure>
+                <img src="/Images/Service3.png" alt="">
+                <figcaption>17.9.2024</figcaption>
+            </figure>
+            <figure>
+                <div>
+                    <div>
+                        <h2>Galleria</h2>
+                        <p>Kuvat ovat projektien parissa napattuja.</p>
+                       
+                    </div>
+                </div>
+            </figure>
+            <figure>
+                <img src="/Images/G5.png" alt="">
+                <figcaption>5.7.2024</figcaption>
+            </figure>
+            <figure>
+                <img src="Images/G6.png" alt="">
+                <figcaption>2.6.2024</figcaption>
+            </figure>
+            <figure>
+                <img src="Images/G4.png" alt="">
+                <figcaption>9.9.2024</figcaption>
+            </figure>
+            <figure>
+                <img src="Images/G7.png" alt="">
+                <figcaption>4.6.2024</figcaption>
+            </figure>
+            <figure>
+                <img src="Images/Sisus.png" alt="">
+                <figcaption>8.11.2024</figcaption>
+            </figure>
+            <figure>
+                <img src="Images/serv4.png" alt="">
+                <figcaption>6.5.2024</figcaption>
+            </figure>
+            <figure>
+                <img src="Images/G1.png" alt="">
+                <figcaption>5.8.2024</figcaption>
+            </figure>
+            <figure>
+                <img src="Images/blank+wall+in+living+room-removebg-preview (1).png" alt="">
+                <figcaption>20.12.2024</figcaption>
+            </figure>
+            <figure>
+                <img src="Images/Sale.png" alt="">
+                <figcaption>1.2.2024</figcaption>
+            </figure>
+            <figure>
+                <img src="Images/G5.png" alt="">
+                <figcaption>6.6.2024</figcaption>
+            </figure>
+        </div>
+    </main>
+
+    <script>
+        "use strict";
+(function () {
+	window.onload = () => {
+		const obj = document.querySelector("#gallery");
+		const time = 10000;
+		function animStart() {
+			if (obj.classList.contains("active") == false) {
+				obj.classList.add("active");
+				setTimeout(() => {
+					animEnd();
+				}, time);
+			}
+		}
+		function animEnd() {
+			obj.classList.remove("active");
+			obj.offsetWidth;
+		}
+		document.addEventListener("scroll", function () {
+			// scroll or scrollend
+			animStart();
+		});
+		window.addEventListener("resize", animStart);
+		animStart();
+	};
+})();
+
+    </script>
+</body>
+</html>

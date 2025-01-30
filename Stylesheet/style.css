@@ -1,79 +1,67 @@
+/* Asetan parit globalit säännöt */
 * {
-
-    scroll-behavior: smooth;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-    text-decoration: none;
-    list-style: none;
-    
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  text-decoration: none;
+  list-style: none;
 }
-
-
+/* Asetan väripaletin jotta voin hyödyntää ja vaihtaa värejä helpommin. */
 :root {
-    --c1: #001553;
-    --c1-darker: #000821;
-    --c2: #faf9fb;
-
-    --c3: #01941c;
-    --c3-darker: #006b1449;
-    --c4: #00ee2c;
+  --c1: #001553;
+  --c1-darker: #000821;
+  --c2: #faf9fb;
+  --c3: #01941c;
+  --c3-darker: #006b1449;
+  --c4: #00ee2c;
 }
-
+/* Bodyrakenteelle perusävri. */
 body {
-    
-    color: var(--c2);
-    
+  color: var(--c2);
 }
-
 
 section {
-    min-height: 90vh;
-    max-width: 100vw;
-    overflow: hidden;
+  min-height: 90vh;
+  max-width: 100vw;
+  overflow: hidden;
 }
-
-
+/* Mielestäni helpompi tehdä asioita ja pitää asiat hyvänkokoisena */
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
-
-
 
 /*  pääasiassa home-taustakuva */
 
 .home {
-    min-height: 100vh;
-    height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/Images/Sale.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-
+  min-height: 100vh;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/Images/Sale.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
-
 
 /*  pääteksti-container */
 
 .teksti {
-    
-    
-    width: 100%;
-    max-width: 45rem;
-    
-    margin-left: 15vw;
-    font-weight: 500;
-    position: relative;
-    transform: translateY(32.5vh);
-    height: 45vh;
-    z-index: 1;
+  width: 100%;
+  max-width: 45rem;
+
+  margin-left: 15vw;
+  font-weight: 500;
+  position: relative;
+  transform: translateY(32.5vh);
+  height: 45vh;
+  z-index: 1;
 }
 
 .teksti .napit {
   display: flex;
-  gap: .5vw;
+  gap: 0.5vw;
   margin-top: 1vh;
 }
 
@@ -81,29 +69,27 @@ html {
   color: var(--c2);
   display: flex;
   align-items: center;
-  padding: .65rem 2rem;
+  padding: 0.65rem 2rem;
   background: var(--c3);
   border-radius: 7px;
   font-size: 1.75rem;
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .napit a:nth-child(1):hover {
   background: transparent;
   border: 0.5px solid var(--c3);
-
 }
 
 .napit a:nth-child(2) {
   color: var(--c2);
   border: 2px solid var(--c3);
   background: var(--c3-darker);
-  padding: .65rem 2rem;
-  transition: .2s ease-in-out;
+  padding: 0.65rem 2rem;
+  transition: 0.2s ease-in-out;
   border-radius: 5px;
   font-size: 1.75rem;
   text-shadow: 0px 0px 1px var(--c2);
-  
 }
 
 .napit a:nth-child(2):hover {
@@ -113,116 +99,112 @@ html {
 }
 
 h1 {
-    margin-top: 20rem;
-    font-size: 4rem;
-    font-weight: 500;
+  margin-top: 20rem;
+  font-size: 4rem;
+  font-weight: 500;
 }
 
 h1 span {
-    color: var(--c3);
+  color: var(--c3);
 }
 
-
-/* bottom pohjushomma */
+/* herolle pieni pohjus ettei kuva ole liian iso. */
 
 .bottom {
-    background: var(--c2);
-    
-    position: absolute;
-    bottom: 0;
-    height: 10vh;
-    width: 100%;
-    box-shadow: 2px 4px 20px var(--c3);
+  background: var(--c2);
+
+  position: absolute;
+  bottom: 0;
+  height: 10vh;
+  width: 100%;
+  box-shadow: 2px 4px 20px var(--c3);
 }
 
-
-
-
-/* navbar rääsät */
+/* navbarin stylet */
 
 .header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    box-shadow: 0 4px 20px var(--c3-darker);
-    background: var(--c2);
-    z-index: 100;
-  }
-  
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 30px;
-  }
-  
-  .logo {
-    display: flex;
-    align-items: center; 
-  }
-  
-  .logo a {
-    font-size: 16px;
-    margin-left: 10px; 
-    font-weight: bold;
-    color: var(--c3);
-  }
-  
-  .logo .logo {
-    width: 46px;
-  }
-  
-
-  .palvelut {
-    
-    background: var(--c2);
-    align-items: center;
-    justify-content: center;
-  }
-
-  .otsikko h2 {
-    color: var(--c3);
-    text-align: center;
-    font-size: 3.5rem;
-    margin-top: 5vw;
-    margin: 2rem;
-  }
-  
-  .palvelut .palvelut-container{
-    margin-top: 2vh;
-    margin: 2rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-
-    gap: 2.5rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 4px 20px var(--c3-darker);
+  background: var(--c2);
+  z-index: 100;
 }
 
-.palvelut-container .palvelut-box{
-    position: relative;
-    display: flex;
-    border-radius: 2rem;
-    box-shadow: 0 0 1rem rgba(0,0,0,.1);
-    overflow: hidden;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
 }
 
-.palvelut-box img{
-    width: 100%;
-    transition: 1.25s;
-    filter: brightness(70%);
+.logo {
+  display: flex;
+  align-items: center;
 }
 
-.palvelut-box:hover img{
-    transform: scale(1.1);
+.logo a {
+  font-size: 16px;
+  margin-left: 10px;
+  font-weight: bold;
+  color: var(--c3);
 }
 
-.palvelut-box .palvelut-layer{
+.logo .logo {
+  width: 46px;
+}
+
+/* Palvelut osio */
+
+.palvelut {
+  background: var(--c2);
+  align-items: center;
+  justify-content: center;
+}
+
+.otsikko h2 {
+  color: var(--c3);
+  text-align: center;
+  font-size: 3.5rem;
+  margin-top: 5vw;
+  margin: 2rem;
+}
+
+.palvelut .palvelut-container {
+  margin-top: 2vh;
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+
+  gap: 2.5rem;
+}
+
+.palvelut-container .palvelut-box {
+  position: relative;
+  display: flex;
+  border-radius: 2rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.palvelut-box img {
+  width: 100%;
+  transition: 1.25s;
+  filter: brightness(70%);
+}
+
+.palvelut-box:hover img {
+  transform: scale(1.1);
+}
+
+.palvelut-box .palvelut-layer {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0,0,0,.1), var(--main-color));
+  background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
   color: var(--white-color);
   display: flex;
   justify-content: center;
@@ -231,21 +213,19 @@ h1 span {
   text-align: center;
   padding: 0 4rem;
   opacity: 1;
-  transition: .5s ease;
+  transition: 0.5s ease;
 }
 
-
-
-.palvelut-layer h4{
+.palvelut-layer h4 {
   font-size: 3rem;
 }
 
-.palvelut-layer p{
+.palvelut-layer p {
   font-size: 1.6rem;
-  margin: .3rem 0 1rem;
+  margin: 0.3rem 0 1rem;
 }
 
-.palvelut-layer a{
+.palvelut-layer a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -256,15 +236,14 @@ h1 span {
   margin-bottom: 1rem;
 }
 
-.palvelut-layer a i{
+.palvelut-layer a i {
   font-size: 3rem;
   color: #fffffffc;
 }
 
-.palvelut-container .heading{
+.palvelut-container .heading {
   padding-bottom: 1rem;
 }
-
 
 /* Väriosio */
 
@@ -273,7 +252,6 @@ h1 span {
   min-height: 90vh;
   background-color: var(--c2);
   background-image: url("data:image/svg+xml,%3Csvg width='84' height='16' viewBox='0 0 84 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M78 7V4h-2v3h-3v2h3v3h2V9h3V7h-3zM30 7V4h-2v3h-3v2h3v3h2V9h3V7h-3zM10 0h2v16h-2V0zm6 0h4v16h-4V0zM2 0h4v16H2V0zm50 0h2v16h-2V0zM38 0h2v16h-2V0zm28 0h2v16h-2V0zm-8 0h6v16h-6V0zM42 0h6v16h-6V0z' fill='%23006b14' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
-  
 
   justify-content: center;
   display: flex;
@@ -283,30 +261,29 @@ h1 span {
   margin-top: 10vh;
   align-items: center;
   text-align: center;
-  
+
   display: flex;
   height: 55vh;
   justify-content: start;
-  flex-direction: column; /* Stack children vertically */
-  
+  flex-direction: column; 
 }
 
 .container h2 {
-  color: transparent; 
+  color: transparent;
   background: linear-gradient(200deg, #0c2f03, rgb(0, 107, 20), rgb(1, 79, 10));
-  background-size: 200%; 
-  background-clip: text; 
-  -webkit-background-clip: text; 
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
   animation: shine 7s infinite;
   font-size: 7rem;
 }
 
 @keyframes shine {
   0% {
-    background-position: 200%; /* Start off-screen to the left */
+    background-position: 200%;
   }
   100% {
-    background-position: -200%; /* End off-screen to the right */
+    background-position: -200%; 
   }
 }
 
@@ -326,15 +303,14 @@ h1 span {
   font-size: 2rem;
 }
 
-
 .container .testausnappi {
   border: 3px solid var(--c3);
   font-size: 2.25rem;
   background: linear-gradient(320deg, #165c04, rgb(0, 107, 20), rgb(1, 79, 10));
-  background-size: 200%; 
+  background-size: 200%;
   animation: shine 10s infinite;
   border-radius: 10px;
-  padding: .5rem 2rem;
+  padding: 0.5rem 2rem;
   color: var(--c2);
   text-align: center;
   justify-content: center;
@@ -345,9 +321,7 @@ h1 span {
 .container .testausnappi:hover {
   color: var(--c3);
   background: var(--c2);
-  
 }
-
 
 /* galleria */
 
@@ -360,41 +334,47 @@ h1 span {
   align-items: center;
   justify-content: center;
   display: flex;
-  flex-direction: column; 
-  align-items: center;  
-
+  flex-direction: column;
+  align-items: center;
 }
 
 .galleria::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% transparency */
+  background-color: rgba(0, 0, 0, 0.5); 
   z-index: 1;
-  
 }
-
 
 .galleria h2 {
   position: relative;
-  color: white; 
-  z-index: 2; 
+  color: white;
+  z-index: 2;
   font-size: 8rem;
-  color: transparent; 
-  background: linear-gradient(200deg, #ffffff, rgb(0, 103, 58), rgb(255, 255, 255));
-  background-size: 200%; 
-  background-clip: text; 
-  -webkit-background-clip: text; 
+  color: transparent;
+  background: linear-gradient(
+    200deg,
+    #ffffff,
+    rgb(0, 103, 58),
+    rgb(255, 255, 255)
+  );
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
   animation: shine 13s infinite;
 }
 
-
 .galleria h3 {
-  color: transparent; 
-  background: linear-gradient(200deg, #ffffff, rgb(3, 180, 103), rgb(255, 255, 255));
-  background-size: 100%; 
-  background-clip: text; 
-  -webkit-background-clip: text; 
+  color: transparent;
+  background: linear-gradient(
+    200deg,
+    #ffffff,
+    rgb(3, 180, 103),
+    rgb(255, 255, 255)
+  );
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
   animation: shine 13s infinite;
   z-index: 2;
   font-size: 1.5rem;
@@ -403,10 +383,15 @@ h1 span {
 .galleria .gallerianappi {
   border: 2px solid var(--c3);
   font-size: 2rem;
-  background: linear-gradient(260deg, #165c04, rgb(0, 107, 20), rgba(255, 255, 255, 0.425));
-  background-size: 200%; 
+  background: linear-gradient(
+    260deg,
+    #165c04,
+    rgb(0, 107, 20),
+    rgba(255, 255, 255, 0.425)
+  );
+  background-size: 200%;
   border-radius: 10px;
-  padding: .5rem 3rem;
+  padding: 0.5rem 3rem;
   color: var(--c2);
   text-align: center;
   justify-content: center;
@@ -416,9 +401,15 @@ h1 span {
 
 .galleria .gallerianappi:hover {
   transition: 2s;
-  background: linear-gradient(260deg, #165c04, rgb(0, 107, 20), rgba(255, 255, 255, 0.667));
-  
+  background: linear-gradient(
+    260deg,
+    #165c04,
+    rgb(0, 107, 20),
+    rgba(255, 255, 255, 0.667)
+  );
 }
+
+/* Yhteydenotot sektioni */
 
 .yhteys {
   background-color: var(--c2);
@@ -431,46 +422,44 @@ h1 span {
   background-image: url("data:image/svg+xml,%3Csvg width='84' height='16' viewBox='0 0 84 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M78 7V4h-2v3h-3v2h3v3h2V9h3V7h-3zM30 7V4h-2v3h-3v2h3v3h2V9h3V7h-3zM10 0h2v16h-2V0zm6 0h4v16h-4V0zM2 0h4v16H2V0zm50 0h2v16h-2V0zM38 0h2v16h-2V0zm28 0h2v16h-2V0zm-8 0h6v16h-6V0zM42 0h6v16h-6V0z' fill='%23006b14' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
 }
 
+/* Samalla footeri yhtyedenotot sektionin pohjaan. */
 .footer {
   display: flex;
-  align-items: center; 
-  justify-content: space-between; 
+  align-items: center;
+  justify-content: space-between;
   height: 12.5vh;
-  background-color: var(--c3); 
-  width: 100%; 
-  position: absolute; 
-  bottom: 0; 
-  z-index: 100; 
-  padding: 2vh 15vw; 
+  background-color: var(--c3);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
+  padding: 2vh 15vw;
   flex-direction: row;
-
-  
 }
-
 
 .footer h3 {
   max-width: 20vw;
   font-weight: 200;
 }
-
+/* someikonit */
 .somet {
   margin-right: 20vw;
   display: flex;
 }
 
 .somet a i {
- font-size: 2.65rem;
- color: var(--c2);
- 
- padding: .7rem;
- transition: 0.2s ease-in-out;
+  font-size: 2.65rem;
+  color: var(--c2);
+
+  padding: 0.7rem;
+  transition: 0.2s ease-in-out;
 }
 
 .somet a i:hover {
   transform: scale(1.2);
 }
 
-
+/* jatkan yhteydenottosektionin asiaa, käytän tässä gridiä */
 
 .yhteys .otsikko h2 {
   color: var(--c3);
@@ -479,16 +468,15 @@ h1 span {
   margin-bottom: 2vh;
   display: flex;
   align-self: flex-start;
-  
 }
 
 .yhteys .asiat {
   display: grid;
-  grid-template-columns: 1fr 1fr; 
-  gap: 2rem; 
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
   width: 100%;
-  max-width: 1200px; 
-  margin: 0 auto; 
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 2rem;
   box-sizing: border-box;
 }
@@ -520,27 +508,23 @@ h1 span {
 }
 
 .vasen a i {
-  margin-right: .5vw;
+  margin-right: 0.5vw;
 }
 
 .vasen h2 {
   font-size: 1.5rem;
   color: var(--c3);
-  
-  
 }
 .vasen h2 i {
   font-size: 2rem;
   color: var(--c3);
   vertical-align: middle;
-  
 }
 
 .oikea {
-  flex-direction: column; 
+  flex-direction: column;
   height: 100%;
   display: grid;
-  
 }
 
 .oikea p {
@@ -550,12 +534,12 @@ h1 span {
   transform: rotate(-6deg);
   max-width: 5rem;
   border-radius: 8px;
-  padding-left: .2vw;
+  padding-left: 0.2vw;
   padding-top: 0.5vh;
   padding-bottom: 0.5vh;
   position: absolute;
   margin-top: 5vh;
-  
+
   background: var(--c2);
   max-height: 4vh;
   min-width: 11rem;
@@ -569,34 +553,33 @@ h1 span {
   display: flex;
   align-self: center;
   margin-left: 8vw;
-  
 }
-form{
+
+/* Oikeanpuolisen formin stylet */
+form {
   max-width: 80%;
   margin: 1rem;
   text-align: center;
   margin-bottom: 10vh;
 }
 
-form .input-box{
+form .input-box {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   height: 5vh;
   margin-bottom: 1vh;
-  
-
 }
 
 form .input-box input {
-  width: 49%; 
+  width: 49%;
   padding: 1.5rem;
   font-size: 1.2rem;
   color: var(--c3);
   border: 0.1rem solid var(--c3);
   border-radius: 0.8rem;
   margin: 0.7rem 0;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 form textarea {
@@ -607,28 +590,27 @@ form textarea {
   font-size: 1.2rem;
   color: var(--c3);
   background-size: 100%;
-  border-radius: 0.8rem; 
+  border-radius: 0.8rem;
   margin: 0.7rem 0;
-  border: 0.2rem solid var(--c3); 
-  box-sizing: border-box; 
+  border: 0.2rem solid var(--c3);
+  box-sizing: border-box;
   background-image: url(/Images/Poistettutausta-logo_AME/Logo\ no\ bg.png);
   background-size: 45%;
   background-position: right;
   background-repeat: no-repeat;
-  
 }
 
-form .input-box input{
+form .input-box input {
   width: 49%;
 }
 
-form textarea{
+form textarea {
   resize: none;
   width: 100%;
   height: 20rem;
 }
 
-form .btn2{
+form .btn2 {
   margin-top: 1rem;
   cursor: pointer;
   border: 1px solid var(--c3);
@@ -646,164 +628,145 @@ form .btn2{
 
 form .input-box input::placeholder,
 form textarea::placeholder {
-    color: var(--c3); 
-    opacity: 1; 
-    font-weight: bold;
+  color: var(--c3);
+  opacity: 1;
+  font-weight: bold;
 }
+
+/* puhelin navbarin tyylit */
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu a {
+  font-weight: 700;
+  display: block;
+  padding: 7px 15px;
+  font-size: 17px;
+  transition: 0.2s all ease-in-out;
+  color: var(--c3);
+}
+
+#btn {
+  display: block;
+  padding: 7px 15px;
+  font-size: 17px;
+  transition: 0.2s all ease-in-out;
+  color: var(--c2);
+  font-weight: 600;
+  border: 2px solid var(--c3);
+  border-radius: 7px;
+  background: var(--c3);
+}
+
+.menu a:hover {
+  opacity: 0.7;
+}
+
+#btn:hover {
+  background: var(--c2);
+  color: var(--c3);
+  opacity: 1;
+  transition-duration: 0.5s;
+}
+
+.menu-icon {
+  display: none;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+#menu-toggle:checked ~ .menu {
+  transform: scale(1, 1);
+}
+/* media querit */
+@media only screen and (max-width: 950px) {
   .menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    background-color: var(--c2);
+    align-items: start;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   }
-  
+
+  .yhteys .asiat {
+    grid-template-columns: 1fr;
+    gap: 5vh;
+  }
+
+  .footer {
+    height: 10vh;
+  }
+
+  .teksti {
+    margin-left: 2vw;
+  }
+
+  html {
+    font-size: 55%;
+  }
+
   .menu a {
-    font-weight: 700;
-    display: block;
-    padding: 7px 15px;
-    font-size: 17px;
-    transition: 0.2s all ease-in-out;
-    color: var(--c3);
+    margin-left: 12px;
   }
 
-  #btn {
-    display: block;
-    padding: 7px 15px;
-    font-size: 17px;
-    transition: 0.2s all ease-in-out;
-    color: var(--c2);
-    font-weight: 600;
-    border: 2px solid var(--c3);
-    border-radius: 7px;
-    background: var(--c3);
-
-  }
-  
-  .menu a:hover {
-    opacity: .7;
-  }
-  
-  #btn:hover {
-    background: var(--c2);
-    color: var(--c3);
-    opacity: 1;
-    transition-duration: .5s;
-    
+  .menu li {
+    margin-bottom: 10px;
   }
 
-  
   .menu-icon {
-    display: none;
+    display: block;
+    color: var(--c3);
+    font-size: 28px;
+    cursor: pointer;
   }
-  
-  #menu-toggle {
-    display: none;
-  }
-  
-  #menu-toggle:checked ~ .menu {
-    transform: scale(1, 1);
-  }
-  
-
-
-  @media only screen and (max-width: 950px) {
-    .menu {
-      flex-direction: column;
-      background-color: var(--c2);
-      align-items: start;
-      position: absolute;
-      top: 70px;
-      left: 0;
-      width: 100%;
-      z-index: 1;
-      transform: scale(1, 0);
-      transform-origin: top;
-      transition: transform 0.3s ease-in-out;
-      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    }
-
-    .yhteys .asiat {
-       grid-template-columns: 1fr;
-       gap: 5vh; 
-    }
-
-    .footer {
-      height: 10vh;
-    }
-
-    .teksti {
-      margin-left: 2vw;
-      
-    }
-
-    html {
-      font-size: 55%;
-    }
-
-    .menu 
-    a {
-      margin-left: 12px;
-    }
-
-  
-    .menu li {
-      margin-bottom: 10px;
-    }
-  
-    .menu-icon {
-      display: block;
-      color: var(--c3);
-      font-size: 28px;
-      cursor: pointer;
-    }
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
   .palvelut .palvelut-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer h3 {
+    max-width: 100vw;
+    font-weight: 200;
+  }
+
+  .yhteys {
+    height: auto;
+  }
+
+  .oikea h2 {
+    margin-left: 0;
+  }
+
+  .footer {
+    padding: 2vh 2vw;
+  }
+
+  .somet {
+    flex-direction: row;
+    margin-left: 5;
+  }
+  .somet a i {
+    font-size: 2rem;
+  }
 }
 
-
-
-.footer h3 {
-  max-width: 100vw;
-  font-weight: 200;
-}
-
-.yhteys {
-  height: auto;
-}
-
-.oikea h2 {
-  margin-left: 0;
-}
-
-.yhteys .otsikko h2 {
-  align-self: ;
-}
-
-
-
-.footer {
-  padding: 2vh 2vw; 
-}
-
-.somet {
-  flex-direction: row;
-  margin-left: 5;
-}
-.somet a i {
-  font-size: 2rem;
-  
-  
-}
-
-
-}
-
-@media (max-width: 617px){
-  .palvelut .palvelut-container{
-      grid-template-columns: 1fr;
-      
+@media (max-width: 617px) {
+  .palvelut .palvelut-container {
+    grid-template-columns: 1fr;
   }
   .palvelut-layer h4 {
     font-size: 3rem;

@@ -1,16 +1,14 @@
+/* globalit säännöt */
 * {
-
-    scroll-behavior: smooth;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-    text-decoration: none;
-    list-style: none;
-    
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  text-decoration: none;
+  list-style: none;
 }
-
-
+/* väripaletit */
 :root {
   --c1: #001553;
   --c1-darker: #000821;
@@ -22,32 +20,22 @@
 }
 
 body {
-    
-    color: var(--c2);
-    
+  color: var(--c2);
 }
-
-
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
-
-
-
-
-
-
+/* vähän mielenkiintoinen valinta sektionille mutta toimii kuitenkin. */
 .juu {
   display: flex;
   position: relative;
   height: 290vh;
   justify-content: center;
   background-color: #ffffff;
-background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2301941c' fill-opacity='0.1'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2301941c' fill-opacity='0.1'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
-
-
+/* "containeri" jossa palvelukortit ovat */
 .keski {
   width: 50vw;
   margin-top: 20vh;
@@ -57,7 +45,6 @@ background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox=
   border-bottom-right-radius: 0;
   background: var(--c2);
   box-shadow: 0px 2px 10px var(--c3);
-  
 }
 .teksti {
   display: flex;
@@ -71,17 +58,15 @@ background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox=
   font-size: 1.75rem;
   display: flex;
   align-self: first baseline;
-  
+
   border: 1px solid var(--c3);
-  padding: .40rem .60rem;
+  padding: 0.4rem 0.6rem;
   border-radius: 7px;
   transform: rotate(-3deg);
   margin-top: 7.5vh;
   background: var(--c2);
-  
 }
 .teksti h2 {
-  
   color: var(--c1-darker);
   margin-top: 1vh;
   font-size: 4.5rem;
@@ -90,7 +75,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox=
 .teksti h2 span {
   color: var(--c3);
 }
-
+/* jokainen palvelukortti käyttää .tapetointia, mutta sisältö ja kuvat on vaihettu jokaiseen. */
 .tapetointi {
   margin-left: 7.5vw;
   display: flex;
@@ -105,31 +90,24 @@ background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox=
   overflow: hidden;
   flex-direction: column;
   /* From https://css.glass */
-background: rgba(227, 227, 227, 0.34);
-border-radius: 16px;
+  background: rgba(227, 227, 227, 0.34);
+  border-radius: 16px;
 
-backdrop-filter: blur(3.9px);
--webkit-backdrop-filter: blur(3.9px);
-border: 1px solid rgba(255, 255, 255, 1);
-  
+  backdrop-filter: blur(3.9px);
+  -webkit-backdrop-filter: blur(3.9px);
+  border: 1px solid rgba(255, 255, 255, 1);
 }
 
 .tapetointi img {
   height: 52.5%;
   width: 100%;
- 
-  
 }
-
-
 
 .tapetointi .tekstit {
   margin-top: 1vh;
   max-width: 80%;
   margin-left: 2vw;
   z-index: 10;
-  
-  
 }
 
 .tekstit h2 {
@@ -152,152 +130,129 @@ border: 1px solid rgba(255, 255, 255, 1);
 /* navbar rääsät */
 
 .header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    box-shadow: 0 4px 20px var(--c3-darker);
-    background: var(--c2);
-    z-index: 100;
-  }
-  
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 30px;
-  }
-  
-  .logo {
-    display: flex;
-    align-items: center; 
-  }
-  
-  .logo a {
-    font-size: 16px;
-    margin-left: 10px; 
-    font-weight: bold;
-    color: var(--c3);
-  }
-  
-  .logo .logo {
-    width: 46px;
-  }
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  .menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .menu a {
-    font-weight: 700;
-    display: block;
-    padding: 7px 15px;
-    font-size: 17px;
-    transition: 0.2s all ease-in-out;
-    color: var(--c3);
-  }
-
-  #btn {
-    display: block;
-    padding: 7px 15px;
-    font-size: 17px;
-    transition: 0.2s all ease-in-out;
-    color: var(--c2);
-    font-weight: 600;
-    border: 2px solid var(--c3);
-    border-radius: 7px;
-    background: var(--c3);
-
-  }
-  
-  .menu a:hover {
-    opacity: .7;
-  }
-  
-  #btn:hover {
-    background: var(--c2);
-    color: var(--c3);
-    opacity: 1;
-    transition-duration: .5s;
-    
-  }
-
-  
-  .menu-icon {
-    display: none;
-  }
-  
-  #menu-toggle {
-    display: none;
-  }
-  
-  #menu-toggle:checked ~ .menu {
-    transform: scale(1, 1);
-  }
-  
-
-
-
-  @media only screen and (max-width: 950px) {
-    .menu {
-      flex-direction: column;
-      background-color: var(--c2);
-      align-items: start;
-      position: absolute;
-      top: 70px;
-      left: 0;
-      width: 100%;
-      z-index: 1;
-      transform: scale(1, 0);
-      transform-origin: top;
-      transition: transform 0.3s ease-in-out;
-      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    }
-
-    .menu 
-    a {
-      margin-left: 12px;
-    }
-
-  
-    .menu li {
-      margin-bottom: 10px;
-    }
-  
-    .menu-icon {
-      display: block;
-      color: var(--c3);
-      font-size: 28px;
-      cursor: pointer;
-    }
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 4px 20px var(--c3-darker);
+  background: var(--c2);
+  z-index: 100;
 }
 
-@media (max-width: 768px){
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo a {
+  font-size: 16px;
+  margin-left: 10px;
+  font-weight: bold;
+  color: var(--c3);
+}
+
+.logo .logo {
+  width: 46px;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu a {
+  font-weight: 700;
+  display: block;
+  padding: 7px 15px;
+  font-size: 17px;
+  transition: 0.2s all ease-in-out;
+  color: var(--c3);
+}
+
+#btn {
+  display: block;
+  padding: 7px 15px;
+  font-size: 17px;
+  transition: 0.2s all ease-in-out;
+  color: var(--c2);
+  font-weight: 600;
+  border: 2px solid var(--c3);
+  border-radius: 7px;
+  background: var(--c3);
+}
+
+.menu a:hover {
+  opacity: 0.7;
+}
+
+#btn:hover {
+  background: var(--c2);
+  color: var(--c3);
+  opacity: 1;
+  transition-duration: 0.5s;
+}
+
+.menu-icon {
+  display: none;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+#menu-toggle:checked ~ .menu {
+  transform: scale(1, 1);
+}
+
+@media only screen and (max-width: 950px) {
+  .menu {
+    flex-direction: column;
+    background-color: var(--c2);
+    align-items: start;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  }
+
+  .menu a {
+    margin-left: 12px;
+  }
+
+  .menu li {
+    margin-bottom: 10px;
+  }
+
+  .menu-icon {
+    display: block;
+    color: var(--c3);
+    font-size: 28px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 768px) {
   .kone-container {
     grid-template-columns: repeat(2, 1fr);
     margin: 2rem;
   }
-
-
 }
 
-@media (max-width: 617px){
+@media (max-width: 617px) {
   .kone-box {
     max-height: 70vh;
     width: 95vw;
-
   }
 }
